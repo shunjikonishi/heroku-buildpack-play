@@ -113,5 +113,8 @@ if [ ! -f Procfile ]; then
   echo "       play run --http.port=\$PORT \$PLAY_OPTS"
 fi
 
-echo "!!! Test !!!"
-ls
+echo "-----> Update netty version to 3.8.0-Final"
+wget https://raw.github.com/shunjikonishi/heroku-buildpack-play/master/lib/netty-3.8.0.Final.jar
+mv netty-3.8.0.Final.jar .play/framework/lib
+rm .play/framework/netty-3.4.2.Final.jar
+
