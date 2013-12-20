@@ -114,6 +114,6 @@ if [ ! -f Procfile ]; then
 fi
 
 echo "-----> Update netty version to 3.8.0-Final"
-curl --silent -O $PLAY_PATH/framework/lib/netty-3.8.0.Final.jar --max-time 60 -- location "https://raw.github.com/shunjikonishi/heroku-buildpack-play/master/lib/netty-3.8.0.Final.jar"
+curl --silent -o $PLAY_PATH/framework/lib/netty-3.8.0.Final.jar https://raw.github.com/shunjikonishi/heroku-buildpack-play/master/lib/netty-3.8.0.Final.jar
 rm .play/framework/netty-3.4.2.Final.jar
 
